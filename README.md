@@ -9,7 +9,7 @@ You may need to change the URL path of the images if you choose to host these im
 
 ## Your Bear
 The image on the left changes to show your bear and hat, based on the Generate Random Bear button. Bears default to a Grizzly in a Trilby. Image does not update when manually setting fields, but can be adjusted by setting the bearImage and hatImage stats to a number 1 through 6.  
-![Bear image, Generate Random Bear button, and stat input fields in the character sheet](https://raw.githubusercontent.com/dCremins/HoneyHeist/master/readme_images/generate.png)  
+![Bear image, Generate Random Bear button, and stat input fields in the character sheet](https://raw.githubusercontent.com/dCremins/HoneyHeist/master/readme_images/generate.png)
 
 ### Generate Random Bear
 This button is powered by the generate.js file, loaded into the API scripts portion of your roll20 game settings. This script generates a random number for each field and then sets those attributes in the character sheet. This button also resets the Bear and Criminal stats to 3.
