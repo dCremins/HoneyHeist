@@ -1,0 +1,236 @@
+.sheet-necessities {
+    align-items:center;
+    display:flex;
+    margin-bottom:30px;
+}
+.sheet-necessities .sheet-info {
+    flex: 1;
+}
+
+.sheet-necessities .sheet-image {
+    width:30%;
+    margin-right:5%;
+    padding-top:38px;
+    text-align: center;
+    position: relative;
+}
+
+.sheet-necessities .sheet-hat {
+    border: none;
+    text-indent: -99999px;
+    height: 56px;
+    width: 64px;
+    background-color: transparent;
+    padding: 0;
+    right: 14px;
+    top: 0;
+    z-index: 10;
+    position: absolute;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sheet-necessities input[value="6"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Fez.png);
+}
+
+.sheet-necessities input[value="2"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Top.png);
+}
+
+.sheet-necessities input[value="1"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Trilby.png);
+}
+
+.sheet-necessities input[value="5"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Cowboy.png);
+}
+
+.sheet-necessities input[value="4"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Flat-Cap.png);
+}
+
+.sheet-necessities input[value="3"] + .sheet-hat {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Crown.png);
+}
+
+.sheet-necessities .sheet-bear {
+    border: none;
+    text-indent: -99999px;
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    padding: 0;
+    margin: 0 auto;
+    z-index: 1;
+    display: block;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sheet-necessities input[value="1"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Grizzly.png);
+}
+
+.sheet-necessities input[value="2"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Polar.png);
+}
+
+.sheet-necessities input[value="3"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Panda.png);
+}
+
+.sheet-necessities input[value="4"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Black.png);
+}
+
+.sheet-necessities input[value="5"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Sun.png);
+}
+
+.sheet-necessities input[value="6"] + .sheet-bear {
+    background-image: url(http://imgsrv.roll20.net/?src=raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Honey%20Badger.png);
+}
+
+.sheet-input {
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+.sheet-stat-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sheet-input-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    width: 48%;
+}
+
+.sheet-stats {
+    float: left;
+    margin-right:20px;
+    text-align: center;
+}
+
+.sheet-header {
+    width: 100%;
+}
+
+.sheet-header h1 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.sheet-header p {
+
+}
+
+.sheet-roll, button[type="roll"].sheet-roll {
+    width: 36px;
+    padding: 7px;
+    background-color: white;
+    border: 1px grey solid;
+    background-image: none;
+    border-radius: 18px;
+}
+
+.sheet-roll, button[type="roll"].sheet-roll::before {
+    content: none;
+}
+
+.sheet-necessities button[type="roll"].sheet-roll-type {
+    width: auto;
+    margin-top: 40px;
+}
+
+.sheet-necessities button[type="roll"].sheet-roll-type img{
+    width: 36px;
+}
+
+.sheet-checkboxes {
+    box-sizing: border-box;
+    width: 25px;
+	height: 25px;
+	position: relative;
+}
+
+input.sheet-span {
+    display: block;
+    position: relative;
+    text-indent: -9999999px;
+}
+
+input[value='1'] + .sheet-fakemark  {
+    display: block;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sheet-rolltemplate-Skill {
+    background-color: #ffffff;
+    border: 1px solid;
+    width: 189px;
+    text-align: center;
+}
+
+.sheet-rolltemplate-Skill .sheet-template-header {
+    background-color: #EB9605;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.sheet-rolltemplate-default caption {
+    background-color: #EB9605;
+    color: black;
+    text-align: center;
+}
+
+.sheet-rolltemplate-Skill .sheet-template-container {
+    padding: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sheet-rolltemplate-Skill .inlinerollresult.fullcrit {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-Skill .inlinerollresult.fullfail {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-Skill .sheet-success {
+    font-weight: bolder;
+    font-size: 30px;
+    color:#3FB315;
+    padding: 10px 0;
+}
+
+.sheet-rolltemplate-Skill .sheet-failure {
+    font-weight: bolder;
+    font-size: 30px;
+    color:#B31515;
+    padding: 10px 0;
+}
+
+.sheet-rolltemplate-Skill .sheet-stat {
+    font-weight: bolder;
+    font-size: 18px;
+}

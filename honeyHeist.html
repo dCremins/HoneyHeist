@@ -1,0 +1,184 @@
+<div class="necessities">
+    <div class="image">
+        <input type="hidden" name="attr_hatImage" value="1" />
+        <span class="hat"></span>
+        <input type="hidden" name="attr_bearImage" value="1" />
+        <span class="bear"></span>
+        <button type="roll" class="roll-type roll" name="roll-type" value='&{template:default} {{name=Generating Bear}} {{CharacterID=@{character_id}}'>
+            <img src="https://raw.githubusercontent.com/dCremins/HoneyHeist/master/images/rollType.png" />
+            Generate Random Bear
+        </button>
+    </div>
+    <div class="info">
+        <div class="input">
+            <label>Bear Name</label>
+            <input type="text" class="sheet-open" name="attr_character_name" />
+        </div>
+
+        <div class="input">
+            <label>Hat</label>
+            <input type="text" class="sheet-open" name="attr_hat" />
+        </div>
+
+        <div class="input">
+            <label>Descriptor</label>
+            <input type="text" class="sheet-open" name="attr_desc" />
+        </div>
+        <div class="input">
+            <label>Bear Type</label>
+            <input type="text" class="sheet-open" name="attr_type" />
+        </div>
+        <div class="input">
+            <label>Role</label>
+            <input type="text" class="sheet-open" name="attr_role" />
+        </div>
+    </div>
+</div>
+
+<div class="stat-container">
+    <div class="input-container">
+        <div class="header">
+            <input type='hidden' name='attr_bear' value='3' />
+            <h1>Bear Skill</h1>
+            <p>Use to maul stuff, run, climb, shrug off damage, scare people, and generally do bear stuff</p>
+        </div>
+        <div class="stats">
+            <button type="roll" class="roll" name="roll-bear" value="&{template:Skill} {{Bear Name= @{character_name}}} {{statName=Bear}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{bear}]]}}">
+                <img src="https://raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Bear.png" />
+            </button>
+            <button type="roll" class="roll bear" name="roll-bear-skilled" value="&{template:Skill} {{Bear Name= @{character_name}}} {{statName=Bear}} {{diceRoll=[[2d6dh1]]}} {{playerStat=[[@{bear}]]}}">
+                <img src="https://raw.githubusercontent.com/dCremins/HoneyHeist/master/images/BearAdvantage.png" />
+            </button>
+        </div>
+        <div class="input">
+            <button class="checkboxes" type="action" name="act_bear1"><input type="hidden" value='1' class="span" name="attr_bear1"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_bear2"><input type="hidden" value='1' class="span" name="attr_bear2"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_bear3"><input type="hidden" value='1' class="span" name="attr_bear3"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_bear4"><input type="hidden" value='0' class="span" name="attr_bear4"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_bear5"><input type="hidden" value='0' class="span" name="attr_bear5"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_bear6"><input type="hidden" value='0' class="span" name="attr_bear6"><span class="fakemark"></span></input></button>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <div class="header">
+            <input type='hidden' name='attr_criminal' value='3' />
+            <h1>Criminal Skill</h1>
+            <p>Use to do anything not directly related to being a bear</p>
+        </div>
+        <div class="stats">
+            <button type="roll" class="roll criminal" name="roll-criminal" value="&{template:Skill} {{Bear Name= @{character_name}}} {{statName=Criminal}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{criminal}]]}}">
+                <img src="https://raw.githubusercontent.com/dCremins/HoneyHeist/master/images/Criminal.png" />
+            </button>
+            <button type="roll" class="roll criminal" name="roll-criminal-skilled" value="&{template:Skill} {{Bear Name= @{character_name}}} {{statName=Criminal}} {{diceRoll=[[2d6dh1]]}} {{playerStat=[[@{criminal}]]}}">
+                <img src="https://raw.githubusercontent.com/dCremins/HoneyHeist/master/images/CriminaAdvantage.png" />
+            </button>
+        </div>
+        <div class="input">
+            <button class="checkboxes" type="action" name="act_criminal1"><input type="hidden" value='1' class="span" name="attr_criminal1"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_criminal2"><input type="hidden" value='1' class="span" name="attr_criminal2"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_criminal3"><input type="hidden" value='1' class="span" name="attr_criminal3"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_criminal4"><input type="hidden" value='0' class="span" name="attr_criminal4"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_criminal5"><input type="hidden" value='0' class="span" name="attr_criminal5"><span class="fakemark"></span></input></button>
+            <button class="checkboxes" type="action" name="act_criminal6"><input type="hidden" value='0' class="span" name="attr_criminal6"><span class="fakemark"></span></input></button>
+        </div>
+    </div>
+    <div class="instructions">
+        <p>
+            When you act, and the outcome is in doubt, roll a D6. If it’s equal to or under the relevant stat, you succeed.
+            If it’s over the stat, you fail. If you’re using your bear special-skill or doing something related to your role,
+            roll 2 D6 and pick the lowest.
+        </p>
+        <p>
+            <strong>FRUSTRATION:</strong> When the plan fails and you run into difficulty, move one point from <strong><em>Criminal</em></strong> into <strong><em>Bear</em></strong>.
+        </p>
+        <p>
+            <strong>GREED:</strong> When the plan goes off without a hitch, move one point from <strong><em>Bear</em></strong> into <strong><em>Criminal</em></strong>.
+        </p>
+    </div>
+</div>
+
+
+<script type="text/worker">
+/*
+Our sheet worker is used to control the hidden checkboxes under criminal and bear, so that we can instead use styled buttons to display like tickmarks.
+Is this the best way to accomplish this? ¯\_(ツ)_/¯
+But it works so whatever
+*/
+
+// use loop to add listeners to each checkbox for Criminal and Bear Stats
+let changeStat = "sheet:opened";
+for(let i = 1; i <= 6; i++) {
+    changeStat = changeStat + " clicked:bear" + i;
+    changeStat = changeStat + " clicked:criminal" + i;
+}
+
+on(changeStat, function(eventInfo) {
+  // Get substring to get just the attribute being changed
+    let attr = eventInfo.triggerName.substring(8, eventInfo.triggerName.length);
+    getAttrs(['bear', 'criminal'], function(values) {
+      // Only change attribute if substring is an actual attribute
+        if( attr != 'ened') {
+            let bear = parseInt(values.bear); // parseInt saves headache later if the number was stored as a string
+            let criminal = parseInt(values.criminal);
+            let setting = {};
+            getAttrs([attr], function(val2) {
+                if(attr.substring(0,4) === 'bear') {
+                    if (val2[attr] === 0) { // if bear was 0, move a point from criminal to bear
+                        bear = bear + 1;
+                        criminal = criminal - 1;
+                    } else { // if bear was 1, move a point from bear to criminal
+                        bear = bear - 1;
+                        criminal = criminal + 1;
+                    }
+                } else { // if criminal was 0, move a point from bear to criminal
+                    if (val2[attr] === 0) {
+                        bear = bear - 1;
+                        criminal = criminal + 1;
+                    } else { // if criminal was 1, move a point from criminal to bear
+                        bear = bear + 1;
+                        criminal = criminal - 1;
+                    }
+                }
+                // These two loops reset the checkboxes to the right number, based on the above change to the stat
+                for(let i = 1; i <= 6; i++) {
+                    if (i <= bear) {
+                        setting['bear'+i] = 1;
+                    } else {
+                        setting['bear'+i] = 0;
+                    }
+                }
+                for(let i = 1; i <= 6; i++) {
+                    if (i <= criminal) {
+                        setting['criminal'+i] = 1;
+                    } else {
+                        setting['criminal'+i] = 0;
+                    }
+                }
+                setting['bear'] = bear;
+                setting['criminal'] = criminal;
+                setAttrs(setting); // Setting them all at once as an object was just easier for me to read
+            });
+        } // end if
+    });
+});
+</script>
+
+
+<rolltemplate class="sheet-rolltemplate-Skill">
+    <div class="sheet-template-header">{{Bear Name}}</div>
+    <div class="sheet-template-container">
+    	{{ #diceRoll }}
+    	    <div class="sheet-template-row"><span class="stat">{{statName}}:</span> {{diceRoll}} vs {{playerStat}}</div>
+
+        	{{#^rollGreater() diceRoll playerStat}}
+        	    <div class="success">Success!</div>
+        	{{/^rollGreater() diceRoll playerStat}}
+
+        	{{#rollGreater() diceRoll playerStat}}
+        	    <div class="failure">Failure</div>
+        	{{/rollGreater() diceRoll playerStat}}
+
+        {{ /diceRoll }}
+    </div>
+</rolltemplate>
